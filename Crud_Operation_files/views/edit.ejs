@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <link rel= "stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    </head>
+<body>
+    <div class="container">
+        <form method="POST" action="/update/<%=employers._id %>">
+            <div class="form-group">
+                <label><b>Name</b></label>
+                <input type="text" name="name" class="form-control" value="<%=employers.name %>">
+            </div>
+            <div class="form-group">
+                <label><b>Address</b></label>
+                <input type="text" name="address" class="form-control" value="<%=employers.address %>">
+            </div>
+            <div class="form-group">
+                <label><b>Email</b></label>
+                <input type="email" name="email" class="form-control" value="<%=employers.email %>">
+            </div>
+            <div class="form-group">
+                <label><b>Designation</b></label>
+                <input type="text" name="designation" class="form-control" value="<%=employers.designation %>">
+            </div>
+            <input type="submit" name="update" value="Update" class="btn btn-success">
+        </form>
+    </div>
+</body>
+</html>

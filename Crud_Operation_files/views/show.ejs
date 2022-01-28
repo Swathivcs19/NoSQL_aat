@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <table class="table table-border table-bordered text-center shadow">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Address</th>
+                <th>Email</th>
+                <th>Designation</th>
+                <th>Remove Employee</th>
+                <th>Add Employee</th>
+            </tr>
+            <% employers.forEach(function(employers){ %>
+            <tr>
+                <td><%=employers._id %></td>
+                <td><%=employers.name %></td>
+                <td><%=employers.address %></td>
+                <td><%=employers.email %></td>
+                <td><%=employers.designation %></td>
+                <td><a href="/delete/<%=employers._id %>" class="btn btn-danger">delete</a></td>
+                <td><a href="/edit/<%=employers._id %>" class="btn btn-success">Update</a></td>
+            </tr>
+            <% }) %>
+        </table>
+    </div>
+</body>
+</html>
